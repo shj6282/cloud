@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  <style>
+    div{
+      margin:100px
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Remote Jobs</h1>
+    <h3>{{num}} {{word}} jobs found</h3>
+    <h5><a href="/">←Go back</a></h5>
+  </header>
+  {% for i in so %}
+    <div>
+      <h2>{{i.get("job")}}</h2>
+      <h4>{{i.get("company")}}</h4>
+      <h4><a href="https://stackoverflow.com{{i.get('href')}}" target="_blank">Apply</a></h4>
+      <hr>
+    </div>
+  {% endfor %}
+  {% for i in reok %}
+    <div>
+      <h2>{{i.get("job")}}</h2>
+      <h4>{{i.get("company")}}</h4>
+      <h4><a href="https://remoteok.io{{i.get('href')}}" target="_blank">Apply</a></h4>
+      <hr>
+    </div>
+  {% endfor %}
+  {% for i in remote %}
+    <div>
+      <h2>{{i.get("job")}}</h2>
+      <h4>{{i.get("company")}}</h4>
+      <h4><a href="https://weworkremotely.com{{i.get('href')}}" target="_blank">Apply</a></h4>
+      <hr>
+    </div>
+  {% endfor %}
+</body>
+
+</html>
