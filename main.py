@@ -3,7 +3,6 @@ from flask import Flask, render_template, request,redirect,send_file
 from SO import get_SO_data
 from Remote import get_Remote_data
 from remoteok import get_remoteok_data
-from exporter import save_to_file
 import os
 
 os.system("clear")
